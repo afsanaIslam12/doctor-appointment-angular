@@ -1,0 +1,37 @@
+
+<h1 style="text-align: center; margin-top: 35px;"><b>Our Doctor List</b></h1>
+<!-- -------------Doctor card--------->
+<div style="margin-top: 30px; margin-left: 5%; margin-right: 5%;" class="card-group">
+  <div *ngFor="let item of doctorsList" style="border: 2px rgb(0, 81, 128) solid; margin: 1%;" class="card">
+    <div *ngIf="item.name== 'Dr. John Doe' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/p2.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+    <div *ngIf="item.name== 'Dr. Mary Ellis' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/dr1.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+    <div *ngIf="item.name== 'Dr. Xyz' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/dr2.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+
+    <div style="text-align: center;" class="card-body">
+      <h4 class="card-title">{{item.name}}</h4>
+      <p>{{item.org}}</p>
+      <div *ngIf="item.availibility.sun">
+        <p>Sunday: {{item.availibility.sun}}</p>
+      </div>
+      <div *ngIf="item.availibility.mon">
+        <p>Monday: {{item.availibility.mon}}</p>
+      </div>
+      <div *ngIf="item.availibility.wed">
+        <p>Wednesday: {{item.availibility.wed}}</p>
+      </div>
+      <div *ngIf="item.availibility.thu">
+        <p>Thursday: {{item.availibility.thu}}</p>
+      </div>
+
+      <a routerLink="/availibility" href="#" class="btn btn-primary">Book an Appointment</a>
+    </div>
+  </div>
+</div>
+
+

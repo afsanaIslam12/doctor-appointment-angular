@@ -1,0 +1,295 @@
+*
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body
+{
+  background-image: url(pp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-position: center;
+  font-family: sans-serif;  
+}
+.menu-bar
+{
+    background: rgb(5, 67, 138);
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.menu-bar ul
+{
+display: inline-flex;
+list-style: none;
+color:#fff;
+}
+.menu-bar ul li
+{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+text-decoration: none;
+color:white;
+}
+.active, .menu-bar ul li:hover
+{
+background: #053952;
+border-radius: 3px;
+}
+.menu-bar .fa
+{
+margin-right: 8px;
+
+}
+.sub-menu-1
+{
+    display:none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(5, 67, 138);
+    margin-top: 15px;
+    margin-left: -15px;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block ;
+    margin: 10px;
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #b2ff00;
+}
+.fa-angle-right
+{
+    float: right;
+}
+.sub-menu-2
+{
+    display:none;
+}
+.hover-me:hover .sub-menu-2
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background:rgb(5, 67, 138);
+}
+.fa fa-user
+{
+    float: right;
+}
+/* .footer 
+  {
+    background-color: rgb(5, 67, 138);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 200px;
+    position: relative;
+    bottom: -800px;
+  }
+  .footer .footer-content
+  {
+    border: 1px solid rgb(23, 194, 236);
+    height: 150px;
+
+  }
+  .footer .footer-bottom
+  {
+    background-color: rgb(62, 113, 209);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+  } */
+  .footer-content{
+    background-color: rgb(11, 59, 114);
+    position: relative;
+    display: flex;
+    bottom: -500px;
+}
+
+
+.footer-section{
+    flex: 1;
+    /* border: 1px solid white; */
+}
+
+.footer-text{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cute;
+}
+
+.footer-contact{
+    color: white;
+}
+
+.footer-head{
+    color: white;
+    text-align: center;
+    font-family: cinze;
+    margin-top: 10px;
+}
+
+.footer-link-head{
+    color: white;
+    text-align: center;
+    font-family: reem;
+    margin-top: 10px;
+}
+
+.footer-contact span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.footer-contact{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.socials{
+    margin-left: 20px;
+    margin-top: 45px;
+   
+}
+
+.socials a{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 1.3em;
+    transition: all .4s;
+}
+
+.socials a:hover{
+    border: 1px solid white;
+    color: white;
+    transition: all .4s;
+    
+}
+
+.links ul a{
+    margin-left: 80px;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+    transition: all .4s;
+    font-family: poire;
+}
+
+.links ul a:hover{
+    color: rgb(184, 209, 70);
+    transition: all .4s;
+    
+}
+
+.footer-contact-head{
+    color: white;
+    text-align: center;
+    font-family: reem;
+    margin-top: 10px;
+
+}
+
+.contact-form input{
+    background: rgb(97, 74, 74);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1rem;
+    padding: .7rem 1.2rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    color: white;
+}
+
+.contact-form textarea{
+    background: rgb(97, 74, 74);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.3rem;
+    width: 220px;
+    height: 100px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    color: white;
+}
+
+#btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1.5px solid rgb(145, 141, 141);
+    border-radius: 5px;
+    background: rgb(129, 102, 102);
+    font-family: cinze;
+    color: white;
+}
+
+#btn:hover{
+    color: rgb(184, 209, 70);
+    transition: all .4s;
+}
+
+
+.footer-button{
+    background: skyblue;
+    color: white;
+    height: 50px;
+    bottom: -800px;
+}
+
+.footer-btn-inner{
+    text-align: center;
+}

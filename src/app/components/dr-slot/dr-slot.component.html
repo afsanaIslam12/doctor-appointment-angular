@@ -1,0 +1,30 @@
+<div style="margin-top: 30px; margin-left: 40%; margin-right: 25%;" class="card-group">
+  <div style="text-align:center">
+    <img style="border-radius: 50%;" height="150px" width="150px" src="assets/p2.jpg"  class="mx-auto d-block" alt="...">
+    <h3>Dr. John Doe</h3>
+    <p>Kings London Hospital</p>
+    <p>Available : Sunday,Wednesday</p>
+</div>
+</div>
+<div class="container">
+
+  <table class="table table-hover" >
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of timeStops">
+        <td>{{data}}</td>
+        <td>
+          <!-- <a routerLink="/appointment" href="#" class="btn btn-primary">Book an Appointment</a> -->
+          <button routerLink="/appointment" type="button" class="btn btn-info">Select</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

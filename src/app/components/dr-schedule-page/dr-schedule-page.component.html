@@ -1,0 +1,68 @@
+
+<div ng-app="Demo" ng-cloak style="padding:20px;"ng-controller="DemoController as ctrl">
+  <script>
+    var myApp = angular.module('myApp', ['moment-picker']);
+
+  </script>
+
+<h1 style="text-align: center; margin-top: 35px;"><b>Select Appointment Date</b></h1>
+<!-- -------------Doctor card--------->
+<div style="margin-top: 30px; margin-left: 5%; margin-right: 5%;" class="card-group">
+  <div *ngFor="let item of doctorsList" style="border: 2px rgb(0, 81, 128) solid; margin: 1%;" class="card">
+    <div *ngIf="item.name== 'Dr. John Doe' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/p2.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+    <div *ngIf="item.name== 'Dr. Mary Ellis' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/dr1.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+    <div *ngIf="item.name== 'Dr. Xyz' ">
+      <img style="border-radius: 50%;" height="150px" width="150px" src="assets/dr2.jpg"  class="mx-auto d-block" alt="...">
+    </div>
+    <div style="text-align: center;" class="card-body">
+      <h4 class="card-title">{{item.name}}</h4>
+      <p>{{item.org}}</p>
+
+
+         <!-- ------------------------------------------------------------------ -->
+      <div ng-repeat="format in ctrl.formats" class="form-group">
+        <input class="form-control"
+        placeholder="Select a date..."
+        moment-picker="ctrl.stringDate"
+        type="date"
+        locale="en"
+        format="YYYY-MM-DD"
+        start-view="month"
+        selectable="ctrl.isSelectable(date, type)"
+        ng-model="ctrl.momentDate"
+        ng-model-options="{ updateOn: 'blur' }">
+      </div>
+      <script >
+        angular.module('Demo', ['moment-picker'])
+          angular.controller('DemoController', ['$scope', function () {
+            var ctrl = this;
+
+            // disable all Sundays in the Month View
+            ctrl.isSelectable = function (date, type) {
+              return type != 'day' || date.format('EEEE') != 'Sunday'|| date.format('dddd') != 'Wednesday';
+            };
+          }]);
+        </script>
+
+    <div *ngIf="item.name== 'Dr. John Doe' ">
+      <a routerLink="/slot" href="#" class="btn btn-primary" >Select Slot</a>
+    </div>
+    <div *ngIf="item.name== 'Dr. Mary Ellis' ">
+      <a routerLink="/m" href="#" class="btn btn-primary" >Select Slot</a>
+    </div>
+    <div *ngIf="item.name== 'Dr. Xyz' ">
+      <a routerLink="/x" href="#" class="btn btn-primary" >Select Slot</a>
+    </div>
+    </div>
+  </div>
+</div>  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+<script src="//rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.js"></script>
+
+</div>
+
+
